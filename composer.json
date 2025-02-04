@@ -1,0 +1,27 @@
+{
+    "name": "vinojcardoza/ebay-api-php",
+    "description": "Ebay SDK for PHP",
+    "version": "1.0.0",
+    "keywords": [
+        "ebay",
+        "api",
+        "php"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Cardoza\\EbaySdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vinoj Cardoza",
+            "email": "vinoj.cardoza@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "guzzlehttp/guzzle": "^7.9"
+    }
+}
