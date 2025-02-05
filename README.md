@@ -1,11 +1,11 @@
-# eBay API for PHP
+# eBay SDK for PHP
 
 ## Description
 
-The eBay API for PHP allows developers to programmatically interact with eBay’s marketplace services. It provides comprehensive access to various features such as listing products, retrieving sales orders, managing inventories, and tracking payments.
+The eBay SDK for PHP allows developers to programmatically interact with eBay’s marketplace services. It provides comprehensive access to various features such as listing products, retrieving sales orders, managing inventories, and tracking payments.
 
 ### Features
-* Order and Transaction Management: Fetch sales orders and transaction details for order processing and reporting.
+Orders and Transaction: Fetch sales orders and transaction details for order processing and reporting.
 
 ### To get refresh token
 
