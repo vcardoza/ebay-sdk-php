@@ -11,6 +11,11 @@ class Order
     private $accessToken;
     private $client;
 
+    /**
+     * Instantiate a new Order class.
+     *
+     * @param string $token The ebay access token
+     */
     public function __construct(string $token)
     {
         $token = new Token();
@@ -19,6 +24,13 @@ class Order
         $this->client = new GuzzleHttpClient();
     }
 
+    /**
+     * Retrieves all orders.
+     *
+     * @param int $limit The number of orders to return
+     * @param int $offset The number of orders to skip
+     * @return array
+     */
     public function getAll(int $limit = 100, int $offset = 0): array
     {
         $response = $this->client->sendRequest(
@@ -36,6 +48,12 @@ class Order
         return $response;
     }
 
+    /**
+     * Retrieves an order by its ID.
+     *
+     * @param string $id The ebay order ID
+     * @return array
+     */
     public function getById(string $id): array
     {
         $response = $this->client->sendRequest(

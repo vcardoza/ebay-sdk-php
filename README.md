@@ -2,7 +2,7 @@
 
 ## Description
 
-The eBay SDK for PHP allows developers to programmatically interact with eBay’s marketplace services. It provides comprehensive access to various features such as listing products, retrieving sales orders, managing inventories, and tracking payments.
+The eBay SDK for PHP allows developers to programmatically interact with eBay’s marketplace services. It provides comprehensive access to various features such as products, retrieving sales orders.
 
 ### Features
 Orders and Transaction: Fetch sales orders and transaction details for order processing and reporting.

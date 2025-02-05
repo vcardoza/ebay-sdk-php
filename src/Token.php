@@ -7,6 +7,11 @@ namespace Cardoza\Ebay;
 use Cardoza\Ebay\Session\SessionStorage;
 use Cardoza\Ebay\GuzzleHttpClient;
 
+/**
+ * Class Token
+ *
+ * @package Cardoza\Ebay
+ */
 class Token
 {
     private $clientId;
@@ -16,7 +21,15 @@ class Token
     private $sessionStorage;
     public $accessToken;
 
-
+    /**
+     * Construct a new instance of the Token class.
+     *
+     * Sets the client id, client secret, redirect url name, and refresh token.
+     * Checks if the access token is empty, has expired, or has not been set and
+     * fetches a new access token if so.
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->sessionStorage = new SessionStorage();
@@ -34,11 +47,25 @@ class Token
         }
     }
 
+    /**
+     * Gets the access token for the current client.
+     *
+     * @return string The access token
+     */
     public function getAccessToken()
     {
         return $this->accessToken;
     }
 
+    /**
+     * Fetches a new access token from the eBay REST API.
+     *
+     * Requests a new access token from the eBay REST API using the client id, client secret, and refresh token.
+     * Stores the new access token in the session.
+     * Returns the new access token.
+     *
+     * @return string The new access token
+     */
     public function fetchAccessToken(): string
     {
         $client = new GuzzleHttpClient();
@@ -70,6 +97,13 @@ class Token
         return $token->access_token;
     }
 
+    /**
+     * Given a URL from eBay, extract the authorization code and exchange it for an access and refresh token.
+     *
+     * @param string $url The URL from eBay that contains the authorization code
+     * @return mixed The access and refresh token pair
+     * @throws \Exception If no authorization code is found in the URL
+     */
     public function getAccessAndRefreshToken(string $url): mixed
     {
         if (empty($url)) throw new \Exception("Invalid URL supplied");
