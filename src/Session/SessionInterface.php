@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cardoza\EbaySdk\Session;
+namespace Cardoza\Ebay\Session;
 
 /**
  * Interface SessionInterface

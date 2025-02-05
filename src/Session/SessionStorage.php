@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Cardoza\EbaySdk\Session;
+namespace Cardoza\Ebay\Session;
 
 use function session_start;
 use function session_status;

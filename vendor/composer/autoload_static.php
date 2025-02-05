@@ -26,7 +26,7 @@ class ComposerStaticInit620b63f03626072dec7f8ffd0ba35393
         ),
         'C' => 
         array (
-            'Cardoza\\EbaySdk\\' => 16,
+            'Cardoza\\Ebay\\' => 13,
         ),
     );
 
@@ -52,7 +52,7 @@ class ComposerStaticInit620b63f03626072dec7f8ffd0ba35393
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-        'Cardoza\\EbaySdk\\' => 
+        'Cardoza\\Ebay\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

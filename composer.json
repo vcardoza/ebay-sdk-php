@@ -1,5 +1,5 @@
 {
-    "name": "vinojcardoza/ebay-api-php",
+    "name": "vinojcardoza/ebay-sdk-php",
     "description": "Ebay SDK for PHP",
     "version": "1.0.0",
     "keywords": [
@@ -11,7 +11,7 @@
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Cardoza\\EbaySdk\\": "src/"
+            "Cardoza\\Ebay\\": "src/"
         }
     },
     "authors": [
