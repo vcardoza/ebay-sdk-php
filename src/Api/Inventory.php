@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Cardoza\Ebay\Api;
 
-use Cardoza\Ebay\Api\ApiInterface;
-
-class Inventory implements ApiInterface
+class Inventory
 {
     private object $client;
 

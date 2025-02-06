@@ -7,7 +7,7 @@ namespace Cardoza\Ebay\Api;
 use Cardoza\Ebay\Token;
 use Cardoza\Ebay\GuzzleHttpClient;
 
-class Order implements ApiInterface
+class Order
 {
     private object $client;
 

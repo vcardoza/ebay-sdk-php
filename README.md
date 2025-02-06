@@ -8,6 +8,7 @@ The eBay SDK for PHP allows developers to programmatically interact with eBay’
 * Store details
 * Orders and Transaction
 * Feedbacks
+* Inventory
 
 ### Initialization
 

@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Cardoza\Ebay\Api;
 
-use Cardoza\Ebay\Api\ApiInterface;
-
-class Feedback implements ApiInterface
+class Feedback
 {
     private $client;
     public function __construct(object $client)
