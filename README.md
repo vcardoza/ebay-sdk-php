@@ -10,6 +10,12 @@ The eBay SDK for PHP allows developers to programmatically interact with eBay’
 * Feedbacks
 * Inventory
 
+### Install
+
+```
+composer require vcardoza/ebay-sdk-php
+```
+
 ### Initialization
 
 ```
