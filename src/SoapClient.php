@@ -23,7 +23,7 @@ class SoapClient
         $this->certId = CLIENT_SECRET;
         $this->oAuthToken = OAUTH_TOKEN;
 
-        $this->wsdl_url = 'http://developer.ebay.com/webservices/1081/eBaySvc.wsdl';
+        $this->wsdl_url = 'http://developer.ebay.com/webservices/latest/eBaySvc.wsdl';
 
         $this->credentials = array('AppId' => $this->appId, 'DevID' => $this->devId, 'AuthCert' => $this->certId);
 
@@ -42,7 +42,7 @@ class SoapClient
 
         $client = new \SOAPClient($this->wsdl_url, array('trace' => 1, 'exceptions' => 0, 'location' => "https://api.ebay.com/wsapi?callname=$apiCall&appid=$this->appId&siteid=0&version=803&Routing=new"));
 
-        $init_params = ['Version' => 1235];
+        $init_params = ['Version' => '803'];
 
         if (!empty($params)) $init_params = array_merge($init_params, $params);
 

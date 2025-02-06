@@ -27,6 +27,15 @@ Get store details
 $sdk->store()->getAll();
 ```
 
+### Inventory
+
+Get inventory
+
+```
+$sdk->inventory()->getAll(int $limit = 100, int $offset = 0);
+$sdk->inventory()->getById('ItemID');
+```
+
 ### Orders
 
 Get all order (limit to latest 100), retrieve more orders by defining the offset
