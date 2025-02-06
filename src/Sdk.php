@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace Cardoza\Ebay;
 
 use Cardoza\Ebay\Token;
-use Cardoza\Ebay\Order;
+use Cardoza\Ebay\Api\Store;
+use Cardoza\Ebay\Api\Order;
+use Cardoza\Ebay\Api\Inventory;
+use Cardoza\Ebay\Api\Feedback;
 
 class Sdk
 {
@@ -20,20 +23,16 @@ class Sdk
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->tokenObj = new Token();
-        $this->accessToken = $this->tokenObj->getAccessToken();
-    }
+    public function __construct() {}
 
     /**
-     * Gets the Token object.
+     * Creates and returns a new Store object.
      *
-     * @return object The Token object
+     * @return object An instance of the Store class initialized with a Guzzle HTTP client.
      */
-    public function token(): object
+    public function store(): object
     {
-        return $this->tokenObj;
+        return new Store(new SoapClient());
     }
 
     /**
@@ -41,8 +40,18 @@ class Sdk
      *
      * @return object An instance of the Order class initialized with the current access token.
      */
-    public function orders(): object
+    public function order(): object
     {
-        return new Order($this->accessToken);
+        return new Order(new SoapClient());
+    }
+
+    public function inventory(): object
+    {
+        return new Inventory(new SoapClient());
+    }
+
+    public function feedback(): object
+    {
+        return new Feedback(new SoapClient());
     }
 }
